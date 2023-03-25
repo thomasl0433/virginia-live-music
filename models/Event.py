@@ -10,13 +10,12 @@ class Event:
         self.description = description
         self.door_time = door_time
         self.image_url = image_url
-        self.event_name = event_name
-        self.event_datetime = event_datetime
+        self.name = name
+        self.datetime = datetime
         self.venue_info = venue_info
         self.url = event_url
         self.source_url = source_url
         self.price = price
-        self.color_id = color_id
 
     def __str__(self):
         return f"{self.event_name}, on {self.event_datetime}, with the doors opening {self.door_time} at {self.venue_info.venue_name}"

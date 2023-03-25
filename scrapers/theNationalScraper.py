@@ -5,11 +5,11 @@ from dateutil.parser import parse
 from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 
-from data.Event import Event
-from data.VenueInfo import VenueInfo
+from models.Event import Event
+from models.VenueInfo import VenueInfo
 
 theNationalRSSFeedURL = "https://www.thenationalva.com/events/rss"
-theNationalVenueInfo = VenueInfo(venue_name="The National", street_address="708 E. Broad Street", city="Richmond", state="Virginia", postal_code=23219)
+theNationalVenueInfo = VenueInfo(venue_name="The National", street_address="708 E. Broad Street", city="Richmond", state="Virginia")
 
 
 def get_national_event_urls():
@@ -32,7 +32,7 @@ def the_national_details_scraper(driver, event_url):
             event_description = event_detail_container.find_element(By.CLASS_NAME, "bio").find_element(By.CLASS_NAME, "collapse-wrapper").text
         except:
             print(f"no bio available for this event {event_name}, {event_url}")
-        event = Event(theNationalVenueInfo, event_date_time, event_door_open_time, event_name, event_image_url, event_description, event_url, color_id="2")
+        event = Event(theNationalVenueInfo, event_date_time, event_door_open_time, event_name, event_image_url, event_description, event_url)
         return event
     except NoSuchElementException as e:
         print(f"Problem extracting for {event_url}, {e}")
