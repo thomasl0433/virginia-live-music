@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "rss-feed-reader"
+version = "0.1.0"
+description = ""
+authors = ["thomasl0433 <61367229+thomasl0433@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "rss_feed_reader"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
