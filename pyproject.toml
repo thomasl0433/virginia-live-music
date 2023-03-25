@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "RVAMusicCalendar"
+version = "0.1.0"
+description = "A collection of scrapers to pull local RVA music into a google calendar"
+authors = ["Zephyr Headley <jzheadley@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+selenium = "4.8.2"
+python-dateutil = "2.8.2"
+feedparser = "6.0.10"
+gcsa = "2.0.1"
+alive-progress = "^3.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
