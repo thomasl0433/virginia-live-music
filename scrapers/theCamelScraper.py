@@ -4,8 +4,8 @@ from pprint import pprint
 from dateutil.parser import parse
 from selenium.webdriver.common.by import By
 
-from data.Event import Event
-from data.VenueInfo import VenueInfo
+from models.Event import Event
+from models.VenueInfo import VenueInfo
 from seleniumDriver import get_selenium_driver
 
 theCamelEventsURL = "https://thecamel.org/events/"
